@@ -86,11 +86,3 @@ onMounted(() => {
     <div v-else style="padding:16px; color:#6b7280;">Select or create a note to start editing.</div>
   </section>
 </template>
-
-<script lang="ts">
-export default {
-  methods: {
-    renderMarkdown,
-  },
-};
-</script>
