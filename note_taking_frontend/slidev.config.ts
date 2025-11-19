@@ -9,7 +9,13 @@ export default defineConfig({
   open: false,
 
   /**
-   * Keep server defaults; vite.config.ts already binds to 0.0.0.0:3000.
-   * Slidev will merge with Vite's dev server settings.
+   * Use environment-provided port (VITE_PORT) or default to 3001.
+   * Slidev merges this with Vite's dev server settings from vite.config.ts.
    */
+  server: {
+    // reading env here covers cases where Slidev doesn't fully merge vite.config before parsing
+    port: Number.isFinite(Number(process.env.VITE_PORT)) ? Number(process.env.VITE_PORT) : 3001,
+    host: '0.0.0.0',
+    strictPort: false, // allow fallback to next free port
+  },
 })
