@@ -2,3 +2,4 @@
    Use Vite-compatible plain CSS import syntax. */
 @import url("./theme/custom.css");
 @import url("./styles/theme.css");
+/* No further changes; ensure file is present so Slidev/Vite can include it */

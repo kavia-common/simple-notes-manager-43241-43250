@@ -9,20 +9,17 @@ transition: slide-left
 fonts:
   sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial
   mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
-# No frontmatter CSS block; style is loaded via style.css which imports theme.css
 ---
-<!-- Global deck settings are defined in the frontmatter above. -->
 
-<!-- Frontmatter setup: make local components available to slides -->
-<!-- Using <script setup> in markdown is supported by Slidev -->
+<!-- Make local components available to slides -->
 <script setup>
-import NotesApp from './components/NotesApp.vue'
+import AppWrapper from './components/AppWrapper.vue'
 </script>
 
 # Notes Manager
 A minimal single-page notes app with Ocean Professional theme.
 
-<NotesApp />
+<AppWrapper />
 
 ---
 
