@@ -14,6 +14,11 @@ css: |
   @import "./style.css";
   @import "./styles/theme.css";
 ---
+<!-- Frontmatter setup: make local components available to slides -->
+<!-- Using <script setup> in markdown is supported by Slidev -->
+<script setup>
+import NotesApp from './components/NotesApp.vue'
+</script>
 
 # Notes Manager
 A minimal single-page notes app with Ocean Professional theme.
