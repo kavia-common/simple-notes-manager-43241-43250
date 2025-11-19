@@ -1,4 +1,4 @@
-/* style.css */
-@import "./theme/custom.css";
-/* Additional app theme */
-@import "./styles/theme.css";
+/* style.css - single entry for app styles
+   Use Vite-compatible plain CSS import syntax. */
+@import url("./theme/custom.css");
+@import url("./styles/theme.css");

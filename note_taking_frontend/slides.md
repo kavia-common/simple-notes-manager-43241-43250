@@ -10,9 +10,7 @@ transition: slide-left
 fonts:
   sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial
   mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
-css: |
-  @import "./style.css";
-  @import "./styles/theme.css";
+# No frontmatter CSS block; style is loaded via style.css which imports theme.css
 ---
 <!-- Frontmatter setup: make local components available to slides -->
 <!-- Using <script setup> in markdown is supported by Slidev -->
