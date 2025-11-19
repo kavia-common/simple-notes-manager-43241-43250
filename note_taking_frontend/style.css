@@ -1,2 +1,4 @@
 /* style.css */
 @import "./theme/custom.css";
+/* Additional app theme */
+@import "./styles/theme.css";
