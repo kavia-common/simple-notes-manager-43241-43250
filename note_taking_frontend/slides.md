@@ -1,5 +1,4 @@
 ---
-# Global deck settings
 theme: default
 title: Notes Manager
 info: |
@@ -12,6 +11,8 @@ fonts:
   mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 # No frontmatter CSS block; style is loaded via style.css which imports theme.css
 ---
+<!-- Global deck settings are defined in the frontmatter above. -->
+
 <!-- Frontmatter setup: make local components available to slides -->
 <!-- Using <script setup> in markdown is supported by Slidev -->
 <script setup>
