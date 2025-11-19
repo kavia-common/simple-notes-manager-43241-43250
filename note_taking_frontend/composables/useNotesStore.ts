@@ -55,8 +55,8 @@ export function useNotesStore() {
     }
   }
 
-  // Init load
-  (async () => {
+  // Init load (deferred to client to avoid SSR localStorage access)
+  async function init() {
     try {
       const local = loadFromLocal();
       if (local?.length) notes.value = local;
@@ -64,7 +64,11 @@ export function useNotesStore() {
     } finally {
       loading.value = false;
     }
-  })();
+  }
+  if (typeof window !== 'undefined') {
+    // run on next tick on client
+    Promise.resolve().then(() => init());
+  }
 
   const filtered = computed(() => {
     const q = query.value.trim().toLowerCase();
