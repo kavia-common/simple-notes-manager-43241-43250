@@ -21,9 +21,7 @@ import NotesApp from './components/NotesApp.vue'
 # Notes Manager
 A minimal single-page notes app with Ocean Professional theme.
 
-<ClientOnly>
-  <NotesApp />
-</ClientOnly>
+<NotesApp />
 
 ---
 

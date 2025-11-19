@@ -15,7 +15,12 @@ type Backend = ReturnType<typeof createApiClient>;
 
 const STORAGE_KEY = 'notes.v1';
 
-// PUBLIC_INTERFACE
+/**
+ * PUBLIC_INTERFACE
+ * useNotesStore
+ * This composable exposes notes state and CRUD methods with debounced autosave.
+ * It is SSR-safe and defers any localStorage or window access to client-side guards.
+ */
 export function useNotesStore() {
   /** This composable exposes notes state and CRUD methods with debounced autosave. */
 

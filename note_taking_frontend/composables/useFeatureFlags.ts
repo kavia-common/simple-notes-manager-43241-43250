@@ -18,7 +18,11 @@ function parseFlags(raw: string | undefined): Partial<Flags> {
   }
 }
 
-// PUBLIC_INTERFACE
+/**
+ * PUBLIC_INTERFACE
+ * useFeatureFlags
+ * Provides feature flags parsed from VITE_FEATURE_FLAGS with sensible defaults (SSR-safe).
+ */
 export function useFeatureFlags() {
   /** Provides feature flags parsed from VITE_FEATURE_FLAGS with sensible defaults. */
   const env = (import.meta as any).env || {};
